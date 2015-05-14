@@ -11,3 +11,19 @@ button{
 	@include span-columns(8);
 	@include shift(2);
 }
+
+.type-system-geometric{
+	p.date {
+    color: $gray-light;
+    font-size: 0.9em;
+    margin-bottom: 0.3em;
+  }
+
+  .continue-reading{
+  	a{
+  		color: $blue-light;
+  	}
+  	
+  }
+
+}
