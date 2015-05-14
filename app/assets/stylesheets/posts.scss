@@ -1,3 +1,13 @@
 button{
 	@include button;
 }
+
+.bigbox{
+	@include outer-container;
+}
+
+.box{
+	@include linear-gradient(#1e5799, #2989d8);
+	height: 300px;
+	@include span-columns(6);
+}

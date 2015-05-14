@@ -12,7 +12,10 @@ gem 'jbuilder', '~> 2.0'
 gem "devise"
 # gem 'bootstrap-sass', '~> 3.3.4.1'
 gem "paperclip", "~> 4.2"
+
 gem 'bourbon'
+gem 'neat'
+gem 'refills'
 
 # gem 'rack-contrib'
 # gem 'soulmate', :require => 'soulmate/server'
