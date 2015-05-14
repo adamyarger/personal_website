@@ -1,5 +1,6 @@
 button{
 	@include button;
+	
 }
 
 .bigbox{
@@ -7,7 +8,8 @@ button{
 }
 
 .box{
-	@include linear-gradient(#1e5799, #2989d8);
 	height: 300px;
-	@include span-columns(6);
+	@include span-columns(8);
+	@include shift(2);
+	background-color: silver;
 }
