@@ -7,15 +7,18 @@
 <div class="bigbox">
 	<div class="box">
 		<article class="type-system-geometric">
-		  <p class="type">Article Type</p>
+		  <!-- <p class="type">Article Type</p> -->
 		  <h1><%= post.title %></h1>
 		  <p>
 		  	<%= post.content %>
 		  </p>
-		  <span class="continue-reading"><%= link_to "Continue Reading", post %></span>
-		  <p class="date"><%= post.created_at.strftime("%D") %></p>
+
+		  <p class="date">
+		  	<span class="continue-reading"><%= link_to "Continue Reading", post %></span>
+		  	<%= post.created_at.strftime("%D") %>
+		  </p>
 		  <hr>
-		  <p class="author"><%= post.user.email %></p>
+		  <p class="author"></p>
 		</article>
 	</div>
 </div>

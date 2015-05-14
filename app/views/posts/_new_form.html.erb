@@ -1,0 +1,9 @@
+<%= form_for :post, url: posts_path do |f| %>
+    
+    <%= f.text_field :title, placeholder: "Title", class: 'form-control' %>
+    <br>
+    <%= f.text_area :content, placeholder: "Tell a story", class: 'form-control' %>
+    <br>
+    <button><%= f.submit %></button>
+
+<% end %>
