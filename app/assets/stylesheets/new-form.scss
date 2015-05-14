@@ -1,16 +1,26 @@
-.form-control{
-  padding: 13px;
-  border-radius: 5px;
-  border: 2px solid $gray-light;
-  margin: 15px 0 0 0px;
-  width: 100%;
-}
 
-button{
-  input{
-    color: #ffffff;
-    background: transparent;
-    border: none;
+.box{
+  .form-control{
+    padding: 13px;
+    border-radius: 5px;
+    border: 2px solid $gray-light;
+    margin: 15px 0 0 0px;
+    width: 100%;
     font-size: 1em;
+  }
+
+  textarea{
+    height: 300px;
+  }
+
+  button{
+    margin-top: 10px;
+    
+    input{
+      color: #ffffff;
+      background: transparent;
+      border: none;
+      font-size: 1em;
+    }
   }
 }
