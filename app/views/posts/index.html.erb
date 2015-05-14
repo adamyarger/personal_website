@@ -1,10 +1,23 @@
-<h1>goood</h1>
 
 
+
+<% @posts.each do |post| %>
+	
 
 <div class="bigbox">
 	<div class="box">
-		<button>Hello World</button>
+		<article class="type-system-geometric">
+		  <p class="type">Article Type</p>
+		  <h1><%= post.title %></h1>
+		  <h2></h2>
+		  <p class="date"><%= post.created_at.strftime("%D") %></p>
+		  <p>
+		  	<%= post.content %>
+		  </p>
+		  <hr>
+		  <p class="author"><%= post.user.email %></p>
+		</article>
 	</div>
-	<div class="box"></div>
 </div>
+
+<% end %>

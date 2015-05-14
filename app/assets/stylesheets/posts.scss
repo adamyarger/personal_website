@@ -1,6 +1,6 @@
 button{
 	@include button;
-	
+
 }
 
 .bigbox{
@@ -8,8 +8,6 @@ button{
 }
 
 .box{
-	height: 300px;
 	@include span-columns(8);
 	@include shift(2);
-	background-color: silver;
 }
