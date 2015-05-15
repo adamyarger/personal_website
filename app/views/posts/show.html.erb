@@ -3,6 +3,10 @@
 	<div class="box">
 		<article class="type-system-geometric">
 		  <h1><%= @post.title %></h1>
+		  <p class="date">
+		  	<span class="continue-reading"><%= @post.user.email %></span>
+		  	<%= @post.created_at.strftime("%D") %>
+		  </p>
 			<%= markdown(@post.content) %>
 		</article>
 	</div>

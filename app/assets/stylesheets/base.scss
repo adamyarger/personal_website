@@ -5,6 +5,7 @@ $gray-light: rgba(0,0,0,0.3);
 $gray-medium: rgba(0,0,0,0.6);
 $blue-light: #2c97de;
 $border-bottom: rgba(0,0,0,0.05);
+$code-block: #f4f4f4;
 
 
 
@@ -19,7 +20,7 @@ a{
 }
 
 pre{
-	background: $background;
+	background: $code-block;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
