@@ -28,10 +28,10 @@ describe PostsController, type: :controller do
 
 	    context 'with invalid attributes' do
 	    	before(:each) do
-				# @request.env["devise.mapping"] = Devise.mappings[:user]
-				user = FactoryGirl.create :user
-				sign_in user
-			end
+					# @request.env["devise.mapping"] = Devise.mappings[:user]
+					user = FactoryGirl.create :user
+					sign_in user
+				end
 
 	    	it 'does not create the post' do
 	    		post :create, post: attributes_for(:post, title: nil)
@@ -45,32 +45,50 @@ describe PostsController, type: :controller do
 	    end
 	end
 
-	# describe 'GET #show' do
-	# 	it 'assigns the requested post to @post' do
-	# 		post = FactoryGirl.create :post
-	# 		get :show, id: post
-	# 		expect(post).to eq (post)
-	# 	end
+	describe 'GET #show' do
+		it 'assigns the requested post to @post' do
+			post = FactoryGirl.create :post
+			get :show, id: post
+			expect(post).to eq (post)
+		end
 
-	# 	it 'renders the #show view' do
-	# 		post = FactoryGirl.create :post
-	# 		get :show, id: post
-	# 		expect(response).to render_template :show
-	# 	end
-	# end
+		it 'renders the #show view' do
+			post = FactoryGirl.create :post
+			get :show, id: post
+			expect(response).to render_template :show
+		end
+	end
 
-	# describe "GET #index" do
-	# 	before(:each) do
-	# 		4.times { FactoryGirl.create :post }
-	# 		get :index
-	# 	end
+	describe "GET #index" do
+		before(:each) do
+			4.times { FactoryGirl.create :post }
+			get :index
+		end
 
-	# 	it { is_expected.to respond_with :ok }
+		it { is_expected.to respond_with :ok }
 
-	# 	it "returns 4 records from the database" do
-	# 		expect(response).to render_template :index
-	# 	end
-	# end
+		it "returns 4 records from the database" do
+			expect(response).to render_template :index
+		end
+	end
+
+	describe "PUT/PATCH #update" do
+		before(:each) do
+			user = FactoryGirl.create :user
+			sign_in user
+		end
+
+		it 'updates the post' do
+			post :update, post: attributes_for(:post)
+			expect(Post.count).to eq(1)
+		end
+
+		it 'redirects to the "show" post' do
+			post :update, post: attributes_for(:post)
+			expect(response).to redirect_to Post.first
+		end
+
+	end
 	
 end
 
