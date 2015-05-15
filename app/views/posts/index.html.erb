@@ -8,7 +8,7 @@
 	<div class="box">
 		<article class="type-system-geometric">
 		  <!-- <p class="type">Article Type</p> -->
-		  <h1><%= post.title %></h1>
+		  <h1><%= link_to post.title, post %></h1>
 		  <p>
 		  	<%= post.content %>
 		  </p>
@@ -17,7 +17,6 @@
 		  	<span class="continue-reading"><%= link_to "Continue Reading", post %></span>
 		  	<%= post.created_at.strftime("%D") %>
 		  </p>
-		  <hr>
 		  <p class="author"></p>
 		</article>
 	</div>

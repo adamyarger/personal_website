@@ -8,4 +8,6 @@ describe Post do
 	it 'is invalid without title' do
 		expect(build(:post, title: nil)).to_not be_valid
 	end
+
+	it { should belong_to(:user) }
 end

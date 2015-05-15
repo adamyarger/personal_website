@@ -3,6 +3,10 @@ button{
 
 }
 
+.type-system-geometric{
+  border-bottom: solid 1px $border-bottom;
+}
+
 .bigbox{
 	@include outer-container;
 }
