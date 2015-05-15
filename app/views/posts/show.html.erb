@@ -1,4 +1,9 @@
-<article class="type-system-geometric">
-  
-<%= markdown(@post.content) %>
-</article>
+
+<div class="bigbox">
+	<div class="box">
+		<article class="type-system-geometric">
+		  <h1><%= @post.title %></h1>
+			<%= markdown(@post.content) %>
+		</article>
+	</div>
+</div>

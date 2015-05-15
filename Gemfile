@@ -13,6 +13,8 @@ gem "devise"
 # gem 'bootstrap-sass', '~> 3.3.4.1'
 gem "paperclip", "~> 4.2"
 gem "redcarpet"
+gem "albino"
+gem "nokogiri"
 
 gem 'bourbon'
 gem 'neat'
