@@ -1,25 +1,28 @@
 
 
 
-<% @posts.each do |post| %>
+
 	
 
 <div class="bigbox">
 	<div class="box">
-		<article class="type-system-geometric">
-		  <!-- <p class="type">Article Type</p> -->
-		  <h1><%= link_to post.title, post %></h1>
-		  <p>
-		  	<%= markdown(post.content) %>
-		  </p>
+		<% @posts.each do |post| %>
+			<article class="type-system-geometric">
+			  <!-- <p class="type">Article Type</p> -->
+			  
+			  <h1><%= link_to post.title, post %></h1>
+			  <p>
+			  	<%= markdown(post.content) %>
+			  </p>
 
-		  <p class="date">
-		  	<span class="continue-reading"><%= link_to "Continue Reading", post %></span>
-		  	<%= post.created_at.strftime("%D") %>
-		  </p>
-		  <p class="author"></p>
-		</article>
+			  <p class="date">
+			  	<span class="continue-reading"><%= link_to "Continue Reading", post %></span>
+			  	<%= post.created_at.strftime("%D") %>
+			  </p>
+
+			  <p class="author"></p>
+			</article>
+		<% end %>
 	</div>
 </div>
 
-<% end %>
