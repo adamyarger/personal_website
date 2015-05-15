@@ -1,3 +1,4 @@
 <article class="type-system-geometric">
-  <p><%= @post.content %></p>
+  
+<%= raw Markdown.new(@post.content).to_html %>
 </article>
