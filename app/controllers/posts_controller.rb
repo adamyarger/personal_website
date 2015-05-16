@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 			flash[:success] = "Hizzah! Post Created!"   					
 			redirect_to @post
 		else
-			flash[:alert] = "Great Scott!"
+			flash.now[:alert] = "Great Scott!"
 			render :new   
 		end
 	end
