@@ -24,6 +24,18 @@ button{
     margin-bottom: 0.3em;
   }
 
+  .delete{
+    float: right;
+    clear: left;
+    a{
+      color: red;
+    }
+
+    a:hover{
+      color: shade(red, 20%);
+    }
+  }
+
   .continue-reading{
   	a{
   		color: $blue-light;

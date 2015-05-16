@@ -3,6 +3,13 @@
 	<div class="box">
 		<article class="type-system-geometric">
 		  <h1><%= @post.title %></h1>
+
+		  <div class="delete">
+		  	<% if user_signed_in? %>
+			  	<%= link_to "delete", @post, method: :delete, data: {confirm: "you sure?"} %>
+			  <% end %>
+		  </div>
+		  
 		  <p class="date">
 		  	<span class="continue-reading"><%= @post.user.email %></span>
 		  	<%= @post.created_at.strftime("%D") %>
