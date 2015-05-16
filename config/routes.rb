@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
   devise_for :users
-  root 'static_pages#root'
+  root 'posts#index'
 
-  resources :posts
+  resources :posts, except: [:index]
 
 end
