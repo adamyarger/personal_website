@@ -9,21 +9,21 @@ describe PostsController, type: :controller do
 
 	describe 'POST #create' do
 	    context 'with valid attributes' do
-			before(:each) do
-				# @request.env["devise.mapping"] = Devise.mappings[:user]
-				user = FactoryGirl.create :user
-				sign_in user
-			end
-	    	
-			it 'creates the post' do
-				post :create, post: attributes_for(:post)
-				expect(Post.count).to eq(1)
-			end
+				before(:each) do
+					# @request.env["devise.mapping"] = Devise.mappings[:user]
+					user = FactoryGirl.create :user
+					sign_in user
+				end
+		    	
+				it 'creates the post' do
+					post :create, post: attributes_for(:post)
+					expect(Post.count).to eq(1)
+				end
 
-			it 'redirects to the "show" action for the new post' do
-				post :create, post: attributes_for(:post)
-				expect(response).to redirect_to Post.first
-			end
+				it 'redirects to the "show" action for the new post' do
+					post :create, post: attributes_for(:post)
+					expect(response).to redirect_to Post.first
+				end
 	    end
 
 	    context 'with invalid attributes' do
@@ -72,28 +72,41 @@ describe PostsController, type: :controller do
 		end
 	end
 
-	# describe "PUT/PATCH #update" do
-	# 	before(:each) do
-	# 		user = FactoryGirl.create :user
-	# 		sign_in user
-	# 	end
+	describe "PUT/PATCH #update" do
+		before(:each) do
+			@user = FactoryGirl.create :user
+			@post = FactoryGirl.create :post, user: @user
+		end
 
-	# 	it 'updates the post' do
-	# 		post :update, post: attributes_for(:post)
-	# 		expect(Post.count).to eq(1)
-	# 	end
+		context "when successfully updated" do
+			before(:each) do
+				patch :update, {user_id: @user.id, id: @post.id, post: {title: "MyString"}}
+			end
 
-	# 	it 'redirects to the "show" post' do
-	# 		post :update, post: attributes_for(:post)
-	# 		expect(response).to redirect_to Post.first
-	# 	end
+			it "redirects to the post show action" do
+				post_response = attributes_for(:post)
+				expect(post_response[:title]).to eql "MyString"
+			end
+		end
 
-	# end
+		context "when not successfully updated" do
+			before(:each) do
+				patch :update, {user_id: @user.id, id: @post.id, post: {title: nil}}
+			end
+		end
+	end
+
+	describe "DELETE #destroy" do
+		before(:each) do
+			@user = FactoryGirl.create :user
+			@post = FactoryGirl.create :post, user: @user
+			delete :destroy, { user_id: @user.id, id: @post.id }
+		end
+
+		it { should respond_with 302 }
+	end
 	
 end
-
-
-
 
 
 

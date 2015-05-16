@@ -12,6 +12,12 @@ class PostsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@post.destroy
+		flash[:success] = "Post deleted"
+		redirect_to request.refferrer || root_url
+	end
+
 	def index
 		@posts = Post.all
 	end
@@ -36,7 +42,7 @@ class PostsController < ApplicationController
 			redirect_to @post
 		else
 			flash[:alert] = "Messed somthing up"
-			render :update
+			render :edit
 		end
 	end
 
