@@ -27,10 +27,17 @@ button{
   .continue-reading{
   	a{
   		color: $blue-light;
-  		padding-right: 5px;
-  		border-right: 1px solid $gray-light;
   	}
+
+    a:hover{
+      color: shade($blue-light, 20%);
+    }
   	
+  }
+
+  .continue-reading::after{
+    content: "-";
+    margin: 0 0.5rem;
   }
 
 }
