@@ -32,8 +32,19 @@
       border-radius: 50%;
       padding: 9px;
       font-weight: 500;
+      background: #fff;
+      cursor: pointer;
+      color: $green;
+      @include transition-property(border);
+      @include transition-duration(0.5s);
+      @include transition-timing-function(ease-in);
+    }
+
+    a:hover{
+      border: 2px solid $green;
     }
   }
+
 
   nav {
     float: none;

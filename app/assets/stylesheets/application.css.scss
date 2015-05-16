@@ -15,13 +15,13 @@
 
  @import "bourbon";
  @import "neat";
- @import "base";
- @import "flash-message";
- @import "posts";
- @import "post-show";
- @import "header";
- @import "footer";
- @import "new-form";
+ @import "variables/base";
+ @import "shared/flash-message";
+ @import "shared/header";
+ @import "shared/footer";
+ @import "posts/posts";
+ @import "posts/post-show";
+ @import "posts/new-form";
 
  
 
