@@ -6,8 +6,8 @@
       <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link"><%= link_to "Blog", root_path %></li>
         <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">Projects</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">Resume</a></li>
+        <!-- <li class="nav-link"><a href="javascript:void(0)">Projects</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Resume</a></li> -->
         <% if user_signed_in? %>
           <li class="nav-link"><%= link_to "New", new_post_path %></li>
         <% end %>
