@@ -1,5 +1,9 @@
 <h1>videos</h1>
 
-<% @videos.each do |video| %>
-	<%= video.content_html %>
-<% end %>
+<div class="bigbox">
+	<div class="box">
+		<% @videos.each do |video| %>
+			<%= video.content_html %>
+		<% end %>
+	</div>
+</div>
