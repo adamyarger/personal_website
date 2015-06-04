@@ -4,9 +4,9 @@
 
 <footer class="footer-2" id="footer" role="contentinfo">
     <ul>
-      <li><a href="javascript:void(0)">Resume</a></li>
+      <!-- <li><a href="javascript:void(0)">Resume</a></li>
       <li><a href="javascript:void(0)">Contact</a></li>
-      <li><a href="javascript:void(0)">Projects</a></li>
+      <li><a href="javascript:void(0)">Projects</a></li> -->
       <% if user_signed_in? %>
         <li><%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>
       <% end %>
