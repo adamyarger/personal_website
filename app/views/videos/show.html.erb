@@ -1,7 +1,19 @@
+<section class="subject">
+	<div class="topic-header">
+		<h1><%= @video.title %></h1>
+	</div>
+</section>
+
 <div class="bigbox">
 	<div class="box video">
 		<div class="videoWrapper">
 			<%= @video.content_html.html_safe %>
 		</div>
+		<p class="show-description">
+			<%= @video.description %>
+		</p>
+		<p class="show-date">
+			<%= @video.created_at.strftime("%D") %>
+		</p>
 	</div>
 </div>
