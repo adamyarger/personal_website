@@ -20,6 +20,7 @@ gem "auto_html"
 gem 'bourbon'
 gem 'neat'
 gem 'refills'
+gem "font-awesome-rails"
 
 # gem 'rack-contrib'
 # gem 'soulmate', :require => 'soulmate/server'
