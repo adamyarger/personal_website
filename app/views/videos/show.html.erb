@@ -12,6 +12,13 @@
 		<p class="show-description">
 			<%= @video.description %>
 		</p>
+
+		<div class="delete">
+	  	<% if user_signed_in? %>
+		  	<%= link_to "delete", @video, method: :delete, data: {confirm: "you sure?"} %>
+		  <% end %>
+	  </div>
+
 		<p class="show-date">
 			<%= @video.created_at.strftime("%D") %>
 		</p>

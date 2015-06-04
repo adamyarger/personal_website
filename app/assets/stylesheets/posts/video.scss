@@ -46,5 +46,25 @@
 		.show-description{
 			padding: 15px 0 15px 0px;
 		}
+
+		.delete{
+	    float: right;
+	    clear: left;
+	    a{
+	      color: red;
+	    }
+
+	    a:hover{
+	      color: shade(red, 20%);
+	    }
+	  }
+
 	}
 }
+
+
+
+
+
+
+
