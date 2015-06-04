@@ -1,12 +1,26 @@
-<h1>videos</h1>
+
+
+
 
 <div class="bigbox">
 	<div class="box">
+		<h1>Videos</h1>
 		<% @videos.each do |video| %>
-			<div class="videoWrapper">
-				<%= video.content_html %>
-			</div>
-				<%= link_to video.title, video_path(video) %>
+			<article class="type-system-geometric">
+			  <!-- <p class="type">Article Type</p> -->
+			  
+			  <h1><%= link_to video.title, video %></h1>
+			  <p>
+			  	<%= video.description %>
+			  </p>
+
+			  <p class="date">
+			  	<span class="continue-reading"><%= link_to "Watch Video", video %></span>
+			  	<%= video.created_at.strftime("%D") %>
+			  </p>
+
+			  <p class="author"></p>
+			</article>
 		<% end %>
 	</div>
 </div>
