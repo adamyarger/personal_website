@@ -14,7 +14,7 @@ class VideosController < ApplicationController
 
 		if @video.save
 			flash[:success] = 'video posted'
-			redirect_to @video
+			redirect_to root_url
 		else
 			flash[:error] = 'Somthing went wrong'
 			render :new
