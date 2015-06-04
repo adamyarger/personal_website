@@ -42,7 +42,7 @@
       font-weight: 500;
       /*background: #fff;*/
       cursor: pointer;
-      color: $green;
+      color: $white;
       @include transition-property(border);
       @include transition-duration(0.5s);
       @include transition-timing-function(ease-in);
