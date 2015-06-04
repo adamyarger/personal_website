@@ -3,9 +3,10 @@
 <div class="bigbox">
 	<div class="box">
 		<% @videos.each do |video| %>
-			
+			<div class="videoWrapper">
 				<%= video.content_html %>
-			
+			</div>
+				<%= link_to video.title, video_path(video) %>
 		<% end %>
 	</div>
 </div>
