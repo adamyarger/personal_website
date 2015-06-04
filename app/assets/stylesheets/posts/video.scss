@@ -12,9 +12,19 @@
 	height: 100%;
 }
 
-.box{
+.container{
+
+	.subject{
+		background: $light-green;
+		margin: 0 auto;
+		width: 100%;
+	  padding: 2.5rem 0;
+	  position: relative;
+	}
 
 	h1{
 		text-align: center;
+		color: $green;
+		font-size: 2em;
 	}
 }

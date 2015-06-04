@@ -24,7 +24,6 @@
 //   }
 // }
 
-.footer-2 {
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
   $medium-screen: em(640) !default;
@@ -33,6 +32,9 @@
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
+
+.footer-2 {
+
 
   background: $footer-background;
   padding: $base-spacing;
