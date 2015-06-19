@@ -118,6 +118,7 @@ html, body {
 	position: absolute;
 	@include center(y);
 	right: 10em;
+	top: 30%;
 	/* hidden on small devices */
 	display: none;
 
@@ -231,6 +232,7 @@ html, body {
 	position: fixed;
 	left: 0;
 	top: 0;
+	margin-top: 0px;
 	height: 100%;
 	width: 100%;
 	background: rgba($color-1, .96);
