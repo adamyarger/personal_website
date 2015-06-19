@@ -104,6 +104,8 @@ html, body {
 	position: absolute;
 	@include center(y);
 	left: .875em;
+	font-size: 1.5em;
+  font-weight: bold;
 
 	img {
 		display: block;
