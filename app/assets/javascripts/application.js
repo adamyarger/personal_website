@@ -13,30 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require posts
 //= require_tree .
 
 
-$(document).ready(function() {
-  var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
-  $('#js-centered-navigation-menu').removeClass("show");
-  
-  menuToggle.on('click', function(e) {
-    e.preventDefault();
-    $('#js-centered-navigation-menu').slideToggle(function(){
-      if($('#js-centered-navigation-menu').is(':hidden')) {
-        $('#js-centered-navigation-menu').removeAttr('style');
-      }
-    });
-  });
-});
-
-//flash message fade out
-
-$(document).ready(function(){
-  $(function() {
-   $('#flash').delay(500).slideDown('normal', function() {
-      $(this).delay(2500).slideUp();
-   });
-  });
-});
 

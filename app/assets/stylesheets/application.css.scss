@@ -17,7 +17,11 @@
  @import "neat";
  @import "font-awesome";
  @import "variables/base";
+ @import "base/variables";
+ @import "base/mixins";
+ @import "base/layout";
  @import "shared/flash-message";
+ @import "shared/codyhouse";
  @import "shared/footer";
  @import "shared/header";
  @import "posts/posts";
