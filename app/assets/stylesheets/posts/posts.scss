@@ -16,6 +16,17 @@ button{
 .box{
 	@include span-columns(8);
 	@include shift(2);
+
+  .title {
+    text-align: center;
+  }
+
+  h1 {
+
+    a {
+      color: $nav-color;
+    }
+  }
 }
 
 .type-system-geometric{
@@ -39,11 +50,11 @@ button{
 
   .continue-reading{
   	a{
-  		color: $blue-light;
+  		color: #AD141E;
   	}
 
     a:hover{
-      color: shade($blue-light, 20%);
+      color: shade(#AD141E, 20%);
     }
   	
   }
