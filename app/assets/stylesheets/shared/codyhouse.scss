@@ -56,7 +56,7 @@ html, body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: rgba($color-1, .95);
+	background: rgba($color-1, .8);
 	height: $header-height-S;
 	width: 100%;
 	z-index: $header-zindex;
@@ -65,7 +65,7 @@ html, body {
 
 	@include MQ(M) {
 		height: $header-height-M;
-		background: transparent;
+		/*background: transparent;*/
 		box-shadow: none;
 	}
 
@@ -81,7 +81,7 @@ html, body {
 			/* when the user scrolls down, we hide the header right above the viewport */
 			position: fixed;
 			top: -$header-height-M;
-			background-color: rgba($color-1, .96);
+			background-color: rgba($color-1, .8);
 			-webkit-transition: -webkit-transform 0.3s;
 			-moz-transition: -moz-transform 0.3s;
 			transition: transform 0.3s;
