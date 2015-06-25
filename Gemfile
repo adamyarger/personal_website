@@ -15,6 +15,8 @@ gem "redcarpet"
 gem "albino"
 gem "nokogiri"
 gem "auto_html"
+gem 'acts-as-taggable-on', '~> 3.4'
+
 
 # design
 gem 'bourbon'
