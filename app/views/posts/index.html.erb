@@ -18,7 +18,7 @@
 			  	<%= post.created_at.strftime("%D") %>
 			  </p>
 
-			  <p>Tags: <%= post.tag_list %></p>
+			  <p>Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 
 			  <p class="author"></p>
 			</article>
