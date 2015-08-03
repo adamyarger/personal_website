@@ -279,40 +279,6 @@ html, body {
 		margin: 2.4em 0 .8em;
 	}
 
-	.cd-social {
-		display: inline-block;
-		margin: 0 .4em;
-		
-		a {
-			width: 44px;
-			height: 44px;
-			padding: 0;
-			background-image: url('cd-socials.svg');
-			background-repeat: no-repeat;
-
-			/* image replacement */
-			overflow: hidden;
-			text-indent: 100%;
-			white-space: nowrap;
-		}
-	}
-
-	.cd-facebook a {
-		background-position: 0 0;
-	}
-
-	.cd-instagram a {
-		background-position: -44px 0;
-	}
-
-	.cd-dribbble a {
-		background-position: -88px 0;
-	}
-
-	.cd-twitter a {
-		background-position: -132px 0;
-	}
-
 	&.is-visible {
 		@include transform(translateY(0));
 	}
