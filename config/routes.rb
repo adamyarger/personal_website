@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   
   devise_for :users, :skip => :registrations
-  root 'posts#index'
+  root 'static_pages#root'
 
-  resources :posts, except: [:index]
+  resources :posts
   resources :projects
   resources :videos
   get 'tags/:tag', to: 'posts#index', as: :tag
