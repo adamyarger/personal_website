@@ -1,0 +1,13 @@
+<div class="bigbox">
+	<div class="box">
+		<%= form_for :project, url: projects_path do |f| %>
+		    <%= f.text_field :title, placeholder: "Title", class: 'form-control' %>
+		    <br>
+		    <%= f.text_area :description, placeholder: "Brief description", class: 'form-control' %>
+		    <br>
+		    <%= f.text_area :content, placeholder: "Tell a story", class: 'form-control' %>
+		    <br>
+		    <button><%= f.submit %></button>
+		<% end %>
+	</div>
+</div>
